@@ -7,8 +7,8 @@ function Section() {
   return (
     <Wrap>
       <ItemText>
-        <h1>Model S</h1>
-        <p>Order online for TouchLess Delivery</p>
+        <H1>Model 3</H1>
+        <P>Leasing starting at $349/mo</P>
       </ItemText>
       <ButtonGroup>
         <LeftButton>Custom Order</LeftButton>
@@ -66,4 +66,13 @@ const RightButton = styled(LeftButton)`
   background-color: white;
   opacity: 0.65;
   color: black;
+`;
+const H1 = styled.h1`
+  font-weight: 800;
+  font-size: 30px;
+  margin-bottom: 5px;
+`;
+const P = styled.p`
+  font-size: 16px;
+  font-weight: 500;
 `;
