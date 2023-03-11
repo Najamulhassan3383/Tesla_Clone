@@ -14,15 +14,9 @@ function Logo() {
 export default Logo;
 
 const LogoContainer = styled.div`
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  height: 40px;
-  width: 90px;
-  z-index: 1;
-  img {
-    height: 100%;
-    width: 100%;
-    object-fit: contain;
-  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
 `;

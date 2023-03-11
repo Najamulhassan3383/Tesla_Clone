@@ -1,31 +1,26 @@
 import React from "react";
 import styled from "styled-components";
 
-function ModelsLinks() {
+function RigntMenu() {
   return (
-    <ModelContainer>
+    <Right>
       <UL>
-        <li>Model S</li>
-        <li>Model 3</li>
-        <li>Model X</li>
-        <li>Model Y</li>
-        <li>Solar Roof</li>
-        <li>Solar Panels</li>
-        <li>PowerWalls</li>
+        <li>Shop</li>
+        <li>Tesla Account</li>
+        <li>Menu</li>
       </UL>
-    </ModelContainer>
+    </Right>
   );
 }
 
-export default ModelsLinks;
+export default RigntMenu;
 
-const ModelContainer = styled.div`
+const Right = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100%;
   width: 100%;
-
   top: 0;
 `;
 

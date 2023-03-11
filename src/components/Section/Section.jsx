@@ -1,19 +1,26 @@
 import React from "react";
 import styled from "styled-components";
+// import back from "../images/model-s.jpg";
 
-import backgroundImage from "../images/model-s.jpg";
+import arrow from "../images/down-arrow.svg";
+// import the image file
 
-function Section() {
+function Section({ title, desc, bcg }) {
+  console.log(bcg);
   return (
-    <Wrap>
+    <Wrap imgUrl={bcg}>
       <ItemText>
-        <H1>Model 3</H1>
+        <H1>{title}</H1>
         <P>Leasing starting at $349/mo</P>
+        <P>{desc}</P>
       </ItemText>
-      <ButtonGroup>
-        <LeftButton>Custom Order</LeftButton>
-        <RightButton>Existing Inventory</RightButton>
-      </ButtonGroup>
+      <Buttons>
+        <ButtonGroup>
+          <LeftButton>Custom Order</LeftButton>
+          <RightButton>Existing Inventory</RightButton>
+        </ButtonGroup>
+        <DownArrow src={arrow} />
+      </Buttons>
     </Wrap>
   );
 }
@@ -23,7 +30,8 @@ export default Section;
 const Wrap = styled.div`
   width: 100vw;
   height: 100vh;
-  background-image: url(${backgroundImage});
+  background-image: url(${(props) => props.imgUrl});
+
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -31,6 +39,7 @@ const Wrap = styled.div`
   flex-direction: column;
   justify-content: space-between; //vertical
   align-items: center; //horizontal
+  z-index: 1;
 `;
 
 const ItemText = styled.div`
@@ -76,3 +85,11 @@ const P = styled.p`
   font-size: 16px;
   font-weight: 500;
 `;
+
+const DownArrow = styled.img`
+  height: 40px;
+  overflow-x: hidden;
+  animation: animateDown infinite 1.5s;
+`;
+
+const Buttons = styled.div``;
