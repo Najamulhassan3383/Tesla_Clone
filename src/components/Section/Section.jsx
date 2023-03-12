@@ -3,17 +3,19 @@ import styled from "styled-components";
 // import back from "../images/model-s.jpg";
 
 import arrow from "../images/down-arrow.svg";
-// import the image file
+import { Fade } from "react-awesome-reveal";
 
 function Section({ title, desc, bcg }) {
-  console.log(bcg);
   return (
     <Wrap imgUrl={bcg}>
-      <ItemText>
-        <H1>{title}</H1>
-        <P>Leasing starting at $349/mo</P>
-        <P>{desc}</P>
-      </ItemText>
+      <Fade direction="up" triggerOnce={true} fraction={0.5} duration={1500}>
+        <ItemText>
+          <H1>{title}</H1>
+          <P>Leasing starting at $349/mo</P>
+          <P>{desc}</P>
+        </ItemText>
+      </Fade>
+
       <Buttons>
         <ButtonGroup>
           <LeftButton>Custom Order</LeftButton>

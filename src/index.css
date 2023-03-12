@@ -16,6 +16,10 @@ body{
   overflow-x: hidden;
  
  }
+ a{
+  text-decoration: none;
+  color: #393c41;
+ }
 
  @keyframes animateDown{
   0%,20%,50%,80%,100%{
